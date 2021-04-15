@@ -7,95 +7,38 @@ import java.net.*;
 
 	
 	public static void main(String[] args) {
-		
-		
-		
-		System.out.println("online lecture will be started");
-if (Desktop.isDesktopSupported()) {
-            Desktop d = Desktop.getDesktop();
-            try {
-                d.browse(new URI("https://web.whatsapp.com/"));
-                
-            } catch (Exception e) {
-                System.out.println(e.getStackTrace());
-
-            }
-
-	
-	
-	
-
-		
-	}
-		
-		for(;;) {
-	Calendar cld = Calendar.getInstance();
-			 
-			
-			if(cld.get(Calendar.HOUR_OF_DAY) == 14 & cld.get(Calendar.MINUTE) == 25 &  cld.get(Calendar.SECOND) == 0) {
-				if (Desktop.isDesktopSupported()) {
-		            Desktop d = Desktop.getDesktop();
-		            try {
-		                d.browse(new URI("file:///C:/subt/forceshutdown.bat"));
-		                break;
-		            } catch (Exception e) {
-		                System.out.println(e.getStackTrace());
-
-		            }
-
-			
-			
-			
-	
-				
-			}
-				
-			
-		
-			
-	}
-			if(cld.get(Calendar.HOUR_OF_DAY) == 12 & cld.get(Calendar.MINUTE) == 15 &  cld.get(Calendar.SECOND) == 0) {
-				if (Desktop.isDesktopSupported()) {
-		            Desktop d = Desktop.getDesktop();
-		            try {
-		                d.browse(new URI("file:///C:/subt/break.txt"));
-		                
-		            } catch (Exception e) {
-		                System.out.println(e.getStackTrace());
-
-		            }
-
-			
-			
-			
-	
-				
-			}
-			
-		
-			
-			
-	}
-			if(cld.get(Calendar.HOUR_OF_DAY) == 12 & cld.get(Calendar.MINUTE) == 45 &  cld.get(Calendar.SECOND) == 0) {
-				if (Desktop.isDesktopSupported()) {
-		            Desktop d = Desktop.getDesktop();
-		            try {
-		                d.browse(new URI("file:///C:/subt/breakended.txt"));
-		                
-		            } catch (Exception e) {
-		                System.out.println(e.getStackTrace());
-
-		            }
-
-			
-			
-			
-	
-				
-			}
-			
-		
-			}
-		}
+			Scanner sc = new Scanner(System.in);
+	    int rows = sc.nextInt();//this will define rows for 1st array and columns for 2nd array
+	    
+	    int columns = sc.nextInt();//this will define columns for 1st array and rows for 2nd array
+	    //primary array which will have our inputs 
+	    int primary[][] = new int[rows][columns];
+	    for(int i = 0;i<rows;i++) {
+	    	for(int j = 0;j<columns;j++) {
+	    		primary[i][j] = sc.nextInt();
+	    	}
+	    }
+	    //This array will have all answer that we wanted.That means this array will have columns of 1st array that is primary in its rows and wise versa
+	    int secondary[][] = new int[columns][rows];
+	    for(int i = 0;i<columns;i++) {
+	    	for(int j = 0;j<rows;j++) {
+	    		secondary[i][j] = primary[j][i];
+	    		
+	    	}
+	    }
+	    //loop will print all values of secondary array 
+	    for(int i = 0;i<columns;i++) {
+	    	for(int j = 0;j<rows;j++) {
+	    		System.out.print(secondary[i][j] + " ");
+	    	}
+	    	System.out.println();
+	    }
+	    		
+	    		
+    }
 }
-}
+		
+		
+		
+			
+	   
