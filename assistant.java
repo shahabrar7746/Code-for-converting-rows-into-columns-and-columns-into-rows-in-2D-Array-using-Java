@@ -1,6 +1,4 @@
 import java.util.*;
-import java.awt.Desktop;
-import java.net.*;
 
 
         public class assistant{
